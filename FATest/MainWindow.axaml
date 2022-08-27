@@ -1,0 +1,21 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ui="using:FluentAvalonia.UI.Controls"
+        xmlns:local="using:FATest"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="FATest.MainWindow"
+        Title="FATest">
+    <Window.DataContext>
+        <local:MainWindowViewModel/>
+    </Window.DataContext>
+
+    <StackPanel>
+        <Button Content="Navigate to page 2"
+                Command="{Binding NavigateToPage2Command}"/>
+
+        <ui:NavigationView MenuItems="{Binding Items}"
+                           SelectedItem="{Binding SelectedItem}"/>
+    </StackPanel>
+</Window>
