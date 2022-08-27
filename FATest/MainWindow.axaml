@@ -11,11 +11,11 @@
         <local:MainWindowViewModel/>
     </Window.DataContext>
 
-    <StackPanel>
-        <Button Content="Navigate to page 2"
-                Command="{Binding NavigateToPage2Command}"/>
-
-        <ui:NavigationView MenuItems="{Binding Items}"
-                           SelectedItem="{Binding SelectedItem}"/>
-    </StackPanel>
+    <ui:NavigationView MenuItems="{Binding Items}"
+                       SelectedItem="{Binding SelectedItem}">
+        <ui:NavigationView.Content>
+            <Button Content="Navigate to page 2"
+                    Command="{Binding NavigateToPage2Command}"/>
+        </ui:NavigationView.Content>
+    </ui:NavigationView>
 </Window>
